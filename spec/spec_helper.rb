@@ -11,7 +11,7 @@ require 'active_record'
 Rails.cache.clear
 
 ActiveRecord::Base.
-  establish_connection(adapter: "sqlite3", database: ":memory:")
+  establish_connection(:adapter => "sqlite3", :database => ":memory:")
 
 ActiveRecord::Schema.define(:version => 0) do
   create_table "posts", :force => true do |t|
